@@ -1,0 +1,25 @@
+{
+  "name": "node-redmine",
+  "version": "1.0.0",
+  "description": "node-redmine is a nodejs library which supports 100% features of Redmine's REST API.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.aliyun.com:redmine/node-redmine.git"
+  },
+  "keywords": [
+    "Redmine",
+    "nodejs",
+    "REST API"
+  ],
+  "author": "wayne@zanran.me",
+  "license": "GPL-3.0"
+}
