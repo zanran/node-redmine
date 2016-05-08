@@ -51,8 +51,40 @@ describe('redmine.test.js', function() {
     done();
   });
 
+  it('test-invalid-options-format', function(done) {
+    try {
+      new Redmine('localhost', {apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key', 'format': 'html'});
+    } catch (e) {
+      assert.equal(e, 'Error: Redmine REST API only supports json and xml !');
+    }
+    done();
+  });
+
+  it('test-valid-options-format-xml', function(done) {
+    new Redmine('localhost', {apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key', 'format': 'xml'});
+
+    done();
+  });
+
+  it('test-valid-options-format-json', function(done) {
+    new Redmine('localhost', {apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key', 'format': 'json'});
+
+    done();
+  });
+
   it('test-valid-options', function(done) {
     new Redmine(hostname, config);
+
+    done();
+  });
+
+  it('test-valid-options-attributes', function(done) {
+    var redmine = new Redmine(hostname, config);
+
+    assert.equal(redmine.apiKey, config.apiKey);
+    assert.equal(redmine.host, hostname);
+    assert.equal(redmine.username, undefined);
+    assert.equal(redmine.password, undefined);
 
     done();
   });
