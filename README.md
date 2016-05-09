@@ -1,8 +1,14 @@
 node-redmine
 ===============
+<<<<<<< f21854f611c6722845ce2f7cdeec67b771101c18
 <<<<<<< 869be1db314317da2b301f5e8d58e015a107ffde
 
+||||||| merged common ancestors
+
+=======
+>>>>>>> enable travis for github
 [![Build Status](https://travis-ci.org/zanran/node-redmine.svg?branch=master)](https://travis-ci.org/zanran/node-redmine)
+<<<<<<< f21854f611c6722845ce2f7cdeec67b771101c18
 
 ||||||| merged common ancestors
 
@@ -15,6 +21,10 @@ node-redmine
 =======
 
 >>>>>>> test for travs
+||||||| merged common ancestors
+
+=======
+>>>>>>> enable travis for github
 ||||||| merged common ancestors
 
 =======
