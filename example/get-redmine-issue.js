@@ -3,6 +3,8 @@
  * Author: wayne <wayne@zanran.me>
  */
 
+'use strict()';
+
 var Redmine = require('../lib/redmine');
 
 ///////////////////////////////////////////////////////////////
