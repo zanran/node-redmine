@@ -18,10 +18,10 @@ var redmine = new Redmine(hostname, config);
  * Dump issue
  */
 var dump_issue = function(issue) {
-  console.log('Dumping issue:')
+  console.log('Dumping issue:');
   for (var item in issue) {
     console.log('  ' + item + ': ' + JSON.stringify(issue[item]));
-  };
+  }
 };
 
 redmine.issues({limit: 2}, function(err, data) {

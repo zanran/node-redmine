@@ -1,4 +1,7 @@
 # nodejs third-party modules
 node_modules
 
+# mocha_istanbul:coverage
+coverage
+
 

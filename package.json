@@ -2,18 +2,14 @@
   "name": "node-redmine",
   "version": "0.1.0",
   "description": "node-redmine is a nodejs library which supports 100% features of Redmine's REST API.",
-  "main": "index.js",
+  "main": "lib/redmine.js",
   "directories": {
     "doc": "doc",
     "example": "example",
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@code.aliyun.com:redmine/node-redmine.git"
+    "test": "grunt serve"
   },
   "keywords": [
     "Redmine",
@@ -23,11 +19,15 @@
   "author": "wayne@zanran.me",
   "license": "GPL-3.0",
   "dependencies": {
+    "debug": "^2.2.0"
+  },
+  "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-mocha-cli": "^2.1.0",
     "grunt-mocha-istanbul": "^4.0.2",
     "grunt-mocha-test": "^0.12.7",
+    "istanbul": "^0.4.3",
     "jshint-stylish": "^2.2.0",
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",

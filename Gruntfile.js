@@ -37,11 +37,6 @@ module.exports = function(grunt) {
 		'jshint'
 	]);
 
-	grunt.registerTask('dev', [
-		'sass',
-		'watch'
-	]);
-
   grunt.registerTask('test', [
     'mochacli'
   ]);
@@ -53,7 +48,6 @@ module.exports = function(grunt) {
 	// default option to connect server
 	grunt.registerTask('serve', [
 		'jshint',
-    'concurrent:dev',
     'mochacli',
     'mocha_istanbul'
 	]);
@@ -62,5 +56,4 @@ module.exports = function(grunt) {
 		grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
 		grunt.task.run(['serve:' + target]);
 	});
-
 };
