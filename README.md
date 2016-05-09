@@ -31,7 +31,12 @@ node-redmine
 >>>>>>> enable travis for github
 node-redmine is a nodejs library which supports 100% features of Redmine's REST API.
 
+<<<<<<< 00706c267b5145c61fa329dcec7694666c7de989
 <<<<<<< aad55fdd0fda951e0c96c97d1e05d9a7c201a407
+||||||| merged common ancestors
+=======
+
+>>>>>>> enable travis for github
 ## Supported features for Redmine REST API
 
 |Resource|Status|Availability|Supported|
