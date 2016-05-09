@@ -1,8 +1,14 @@
 node-redmine
 ===============
+<<<<<<< 869be1db314317da2b301f5e8d58e015a107ffde
 
 [![Build Status](https://travis-ci.org/zanran/node-redmine.svg?branch=master)](https://travis-ci.org/zanran/node-redmine)
 
+||||||| merged common ancestors
+
+=======
+[![Build Status](https://travis-ci.org/zanran/node-redmine.svg?branch=master)](https://travis-ci.org/zanran/node-redmine)
+>>>>>>> enable travis for github
 node-redmine is a nodejs library which supports 100% features of Redmine's REST API.
 
 ## Supported features for Redmine REST API
