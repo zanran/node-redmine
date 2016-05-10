@@ -36,26 +36,6 @@ redmine.issues({limit: 2}, function(err, data) {
   console.log('total_count: ' + data.total_count);
 });
 
-// add watchers
-redmine.add_watcher(2, {user_id: 5}, function(err, data) {
-  if (err) throw err;
-
-  console.log(data);
-});
-
-// add watchers
-redmine.remove_watcher(2, 6, function(err, data) {
-  if (err) throw err;
-
-  console.log(data);
-});
-
-redmine.update_issue(2, {subject: 'Redmine REST API by Node.js'}, function(err, data) {
-  if (err) throw err;
-
-  console.log(data);
-});
-
 // get issue by id
 var params = {include: 'attachments,journals,watchers'};
 redmine.get_issue_by_id(2, params, function(err, data) {
@@ -64,7 +44,7 @@ redmine.get_issue_by_id(2, params, function(err, data) {
   dump_issue(data.issue);
 });
 
-/*
+
 redmine.delete_issue(1, function(err, data) {
   if (err) {
     console.log(err);
@@ -72,5 +52,20 @@ redmine.delete_issue(1, function(err, data) {
   } else {
     console.log('Delete issue #1: ' + JSON.stringify(data));
   }
+});
+
+
+// add watchers
+redmine.add_watcher(2, {user_id: 5}, function(err, data) {
+  if (err) throw err;
+
+  console.log(data);
+});
+/*
+// remove watchers
+redmine.remove_watcher(2, 5, function(err, data) {
+  if (err) throw err;
+
+  console.log(data);
 });
 */

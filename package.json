@@ -16,6 +16,10 @@
     "nodejs",
     "REST API"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zanran/node-redmine.git"
+  },
   "author": "wayne@zanran.me",
   "license": "GPL-3.0",
   "dependencies": {
