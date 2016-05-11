@@ -7,11 +7,9 @@ module.exports = {
     }
   },
 
-  all: [ 'lib/**/*.js',
+  all: [ 
+    'lib/**/*.js',
     'example/**/*.js',
-    'example/**/*.js'
-  ],
-  server: [
-    './index.js'
+    'test/**/*.js'
   ]
 }
