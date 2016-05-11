@@ -26,8 +26,8 @@ node-redmine is a nodejs library which supports 100% features of Redmine's REST 
 |Issue Categories |Alpha |1.3|N|
 |Roles|Alpha |1.4|N|
 |Groups|Alpha |2.1|N|
-|Custom Fields |Alpha |2.4|N|
-|Search|Alpha|3.3|N|
+|Custom Fields |Alpha |2.4|Y|
+|Search|Alpha|3.3|N/A|
 
 
 ## Link
