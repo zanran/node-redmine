@@ -13,8 +13,8 @@ node-redmine is a nodejs library which supports 100% features of Redmine's REST 
 |Projects |Stable |1.0|Y|
 |Project Memberships|Alpha |1.4|N|
 |Users |Stable |1.1|Y|
-|Time Entries |Stable|1.1|N|
-|News |Prototype |1.1|N|
+|Time Entries |Stable|1.1|Y|
+|News |Prototype |1.1|Y|
 |Issue Relations |Alpha |1.3|N|
 |Versions |Alpha |1.3|N|
 |Wiki Pages |Alpha |2.2|N|
