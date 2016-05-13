@@ -16,12 +16,12 @@ node-redmine is a nodejs library which supports 100% features of Redmine's REST 
 |Time Entries |Stable|1.1|Y|
 |News |Prototype |1.1|Y|
 |Issue Relations |Alpha |1.3|Y|
-|Versions |Alpha |1.3|N|
+|Versions |Alpha |1.3|Y|
 |Wiki Pages |Alpha |2.2|N|
-|Queries |Alpha |1.3|N|
-|Attachments |Beta |1.3|N|
-|Issue Statuses |Alpha |1.3|N|
-|Trackers |Alpha |1.3|N|
+|Queries |Alpha |1.3|Y|
+|Attachments |Beta |1.3|Y|
+|Issue Statuses |Alpha |1.3|Y|
+|Trackers |Alpha |1.3|Y|
 |Enumerations |Alpha |2.2|N|
 |Issue Categories |Alpha |1.3|N|
 |Roles|Alpha |1.4|N|
