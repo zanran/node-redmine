@@ -17,15 +17,15 @@ node-redmine is a nodejs library which supports 100% features of Redmine's REST 
 |News |Prototype |1.1|Y|
 |Issue Relations |Alpha |1.3|Y|
 |Versions |Alpha |1.3|Y|
-|Wiki Pages |Alpha |2.2|N|
+|Wiki Pages |Alpha |2.2|Y|
 |Queries |Alpha |1.3|Y|
 |Attachments |Beta |1.3|Y|
 |Issue Statuses |Alpha |1.3|Y|
 |Trackers |Alpha |1.3|Y|
-|Enumerations |Alpha |2.2|N|
-|Issue Categories |Alpha |1.3|N|
-|Roles|Alpha |1.4|N|
-|Groups|Alpha |2.1|N|
+|Enumerations |Alpha |2.2|Y|
+|Issue Categories |Alpha |1.3|Y|
+|Roles|Alpha |1.4|Y|
+|Groups|Alpha |2.1|Y|
 |Custom Fields |Alpha |2.4|Y|
 |Search|Alpha|3.3|N/A|
 
@@ -33,3 +33,7 @@ node-redmine is a nodejs library which supports 100% features of Redmine's REST 
 ## Link
 
 * http://www.redmine.org/projects/redmine/wiki/Rest_api
+
+
+## Notice
++ node-redmine only supports [JSON](http://en.wikipedia.org/wiki/JSON) format.

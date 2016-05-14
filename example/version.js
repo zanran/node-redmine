@@ -74,3 +74,27 @@ redmine.trackers(function(err, data) {
 
   console.log(data);
 });
+
+redmine.issue_priorities(function(err, data) {
+  if (err) throw err;
+
+  console.log(data);
+});
+
+redmine.time_entry_activities(function(err, data) {
+  if (err) throw err;
+
+  console.log(data);
+});
+
+redmine.roles(function(err, data) {
+  if (err) throw err;
+
+  console.log(data);
+});
+
+redmine.role_by_id(4, function(err, data) {
+  if (err) throw err;
+
+  console.log(data);
+});
