@@ -12,7 +12,7 @@ npm install node-redmine
 ```
 ## Usage
 ```
-var Redmine = require('../lib/redmine');
+var Redmine = require('node-redmine');
 
 ///////////////////////////////////////////////////////////////
 var hostname = process.env.REDMINE_HOST || 'redmine.zanran.me';
