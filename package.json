@@ -1,6 +1,6 @@
 {
   "name": "node-redmine",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "node-redmine is a nodejs library which supports 100% features of Redmine's REST API.",
   "main": "lib/redmine.js",
   "directories": {
@@ -23,7 +23,8 @@
   "author": "wayne@zanran.me",
   "license": "GPL-3.0",
   "dependencies": {
-    "debug": "^2.2.0"
+    "debug": "^2.2.0",
+    "request": "^2.75.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

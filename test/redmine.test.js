@@ -9,40 +9,36 @@ var Redmine = require('../lib/redmine');
 
 ///////////////////////////////////////////////////////////////
 var hostname = process.env.REDMINE_HOST || 'localhost';
-var config = {
-  apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key'
-};
 
-describe('redmine.test.js', function() {
-  it('test-empty-confgi', function(done) {
+describe('Redmine constructor', function() {
+  it('should throw host not specified error when no host or config given', function(done) {
     try {
       new Redmine();
     } catch (e) {
-      assert.equal(e, 'Error: Invalidate hostname !');
-    }
-
-    done();
-  });
-
-  it('test-invalid-hostname-1', function(done) {
-    try {
-      new Redmine({});
-    } catch (e) {
-      assert.equal(e, 'Error: hostname should be a String !');
+      assert.equal(e, 'Error: host not specified!');
     }
     done();
   });
 
-  it('test-invalid-hostname-2', function(done) {
+  it('should throw invalid hostname error when host is invalid', function(done) {
     try {
       new Redmine(1);
     } catch (e) {
-      assert.equal(e, 'Error: hostname should be a String !');
+      assert.equal(e, 'Error: host should be a string or url object!');
     }
     done();
   });
 
-  it('test-invalid-options-2', function(done) {
+  it('should throw authentication missing error when no config given', function(done) {
+    try {
+      new Redmine('localhost');
+    } catch (e) {
+      assert.equal(e, 'Error: You should provide an API key or username & password !');
+    }
+    done();
+  });
+
+  it('should throw authentication missing error when API key and credentials missing', function(done) {
     try {
       new Redmine('localhost', {});
     } catch (e) {
@@ -51,40 +47,58 @@ describe('redmine.test.js', function() {
     done();
   });
 
-  it('test-invalid-options-format', function(done) {
+  it('should throw authentication missing error when password missing', function(done) {
+    var config = {
+      username: 'dummy-username'
+    };
     try {
-      new Redmine('localhost', {apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key', 'format': 'html'});
+      new Redmine('localhost', {});
     } catch (e) {
-      assert.equal(e, 'Error: Redmine REST API only supports json and xml !');
+      assert.equal(e, 'Error: You should provide an API key or username & password !');
     }
     done();
   });
 
-  it('test-valid-options-format-xml', function(done) {
-    new Redmine('localhost', {apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key', 'format': 'xml'});
-
+  it('should throw authentication missing error when username missing', function(done) {
+    var config = {
+      password: 'dummy-password'
+    };
+    try {
+      new Redmine('localhost', {});
+    } catch (e) {
+      assert.equal(e, 'Error: You should provide an API key or username & password !');
+    }
     done();
   });
 
-  it('test-valid-options-format-json', function(done) {
-    new Redmine('localhost', {apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key', 'format': 'json'});
-
-    done();
-  });
-
-  it('test-valid-options', function(done) {
+  it('should not throw errors when host and api key given', function(done) {
+    var config = {
+      apiKey: process.env.REDMINE_APIKEY || 'my-redmine-api-key'
+    };
     new Redmine(hostname, config);
+    done();
+  });
 
+  it('should not throw errors when host and credentials given', function(done) {
+    var config = {
+      username: 'dummy-username',
+      password: 'dummy-password'
+    };
+    new Redmine(hostname, config);
     done();
   });
 
   it('test-valid-options-attributes', function(done) {
+    var config = {
+      apiKey:   'dummy-api-key',
+      username: 'dummy-username',
+      password: 'dummy-password'
+    };
     var redmine = new Redmine(hostname, config);
 
-    assert.equal(redmine.apiKey, config.apiKey);
-    assert.equal(redmine.host, hostname);
-    assert.equal(redmine.username, undefined);
-    assert.equal(redmine.password, undefined);
+    assert.equal(redmine.apiKey,   'dummy-api-key');
+    assert.equal(redmine.username, 'dummy-username');
+    assert.equal(redmine.password, 'dummy-password');
 
     done();
   });
