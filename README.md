@@ -1,17 +1,22 @@
 node-redmine
-===============
+============
 
-# [![Build Status](https://travis-ci.org/zanran/node-redmine.svg?branch=master)](https://travis-ci.org/zanran/node-redmine)   [![npm version](https://img.shields.io/npm/v/node-redmine.svg?style=flat)](https://www.npmjs.com/package/node-redmine)
+[![Build Status](https://travis-ci.org/zanran/node-redmine.svg?branch=master)](https://travis-ci.org/zanran/node-redmine)
+[![npm version](https://img.shields.io/npm/v/node-redmine.svg?style=flat)](https://www.npmjs.com/package/node-redmine)
 
-*[node-redmine](https://github.com/zanran/node-redmine) is a nodejs library which supports 100% features of [Redmine's REST API](http://www.redmine.org/projects/redmine/wiki/Rest_api).*
+*[node-redmine](https://github.com/zanran/node-redmine) is a nodejs library that supports 100% the [Redmine's REST API](http://www.redmine.org/projects/redmine/wiki/Rest_api)'s features.*
 
 ## Installation
+
 To install node-redmine, simply:
-```noodejs
+
+```shell
 npm install node-redmine
 ```
+
 ## Usage
-```
+
+```js
 var Redmine = require('node-redmine');
 
 ///////////////////////////////////////////////////////////////
@@ -45,33 +50,33 @@ redmine.issues({limit: 2}, function(err, data) {
 
 ## Supported features for Redmine REST API
 
-|Resource|Status|Availability|Supported|
-|------------- |:-------------:|:-----:|:-----:|
-|Issues|Stable|1.0|Y|
-|Projects |Stable |1.0|Y|
-|Project Memberships|Alpha |1.4|Y|
-|Users |Stable |1.1|Y|
-|Time Entries |Stable|1.1|Y|
-|News |Prototype |1.1|Y|
-|Issue Relations |Alpha |1.3|Y|
-|Versions |Alpha |1.3|Y|
-|Wiki Pages |Alpha |2.2|Y|
-|Queries |Alpha |1.3|Y|
-|Attachments |Beta |1.3|Y|
-|Issue Statuses |Alpha |1.3|Y|
-|Trackers |Alpha |1.3|Y|
-|Enumerations |Alpha |2.2|Y|
-|Issue Categories |Alpha |1.3|Y|
-|Roles|Alpha |1.4|Y|
-|Groups|Alpha |2.1|Y|
-|Custom Fields |Alpha |2.4|Y|
-|Search|Alpha|3.3|N/A|
+| Resource            | Status    | Availability | Supported |
+|:--------------------|:----------|-------------:|:---------:|
+| Issues              | Stable    |          1.0 |     ✓     |
+| Projects            | Stable    |          1.0 |     ✓     |
+| Project Memberships | Alpha     |          1.4 |     ✓     |
+| Users               | Stable    |          1.1 |     ✓     |
+| Time Entries        | Stable    |          1.1 |     ✓     |
+| News                | Prototype |          1.1 |     ✓     |
+| Issue Relations     | Alpha     |          1.3 |     ✓     |
+| Versions            | Alpha     |          1.3 |     ✓     |
+| Wiki Pages          | Alpha     |          2.2 |     ✓     |
+| Queries             | Alpha     |          1.3 |     ✓     |
+| Attachments         | Beta      |          1.3 |     ✓     |
+| Issue Statuses      | Alpha     |          1.3 |     ✓     |
+| Trackers            | Alpha     |          1.3 |     ✓     |
+| Enumerations        | Alpha     |          2.2 |     ✓     |
+| Issue Categories    | Alpha     |          1.3 |     ✓     |
+| Roles               | Alpha     |          1.4 |     ✓     |
+| Groups              | Alpha     |          2.1 |     ✓     |
+| Custom Fields       | Alpha     |          2.4 |     ✓     |
+| Search              | Alpha     |          3.3 |    N/A    |
 
+## Links
 
-## Link
-
-* http://www.redmine.org/projects/redmine/wiki/Rest_api
+* Redmine wiki page: http://www.redmine.org/projects/redmine/wiki/Rest_api
+* NPM package: https://www.npmjs.com/package/node-redmine
 
 
 ## Notice
-+ node-redmine only supports [JSON](http://en.wikipedia.org/wiki/JSON) format.
++ node-redmine only supports using the [JSON](http://en.wikipedia.org/wiki/JSON) format.
