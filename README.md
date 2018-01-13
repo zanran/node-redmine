@@ -19,8 +19,8 @@ npm install node-redmine
 ```js
 var Redmine = require('node-redmine');
 
-///////////////////////////////////////////////////////////////
-var hostname = process.env.REDMINE_HOST || 'redmine.zanran.me';
+// protocol required in Hostname, supports both HTTP and HTTPS
+var hostname = process.env.REDMINE_HOST || 'http://redmine.zanran.me';
 var config = {
   apiKey: process.env.REDMINE_APIKEY || 'bed1ba0544b681e530c2447341607f423c9c8781'
 };
